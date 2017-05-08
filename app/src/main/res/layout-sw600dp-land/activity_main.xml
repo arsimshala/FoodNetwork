@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipe_refresh">
+
+    <include layout="@layout/layout_toolbar"
+        android:id="@+id/toolbar" />
+
+    <fragment
+        android:id="@+id/f_meals_list"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="400dp"
+        android:layout_height="match_parent"
+        style="@style/MatchWidthMatchHeight" />
+
+</android.support.v4.widget.SwipeRefreshLayout>
+
+
