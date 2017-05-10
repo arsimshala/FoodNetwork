@@ -5,7 +5,8 @@
     style="@style/MatchWidthMatchHeight"
     android:id="@+id/swipe_refresh">
 
-    <include layout="@layout/layout_toolbar"
+    <include
+        layout="@layout/layout_toolbar"
         android:id="@+id/toolbar" />
 
     <fragment
