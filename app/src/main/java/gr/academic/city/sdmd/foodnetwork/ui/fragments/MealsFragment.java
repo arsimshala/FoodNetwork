@@ -1,6 +1,7 @@
 package gr.academic.city.sdmd.foodnetwork.ui.fragments;
 
 import android.content.Context;
+import android.app.Fragment;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.AsyncTask;
@@ -22,7 +23,7 @@ import gr.academic.city.sdmd.foodnetwork.db.FoodNetworkContract;
 import gr.academic.city.sdmd.foodnetwork.service.MealService;
 
 
-public class MealsFragment extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
+public class MealsFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor> {
 
     private static final String EXTRA_MEAL_TYPE_SERVER_ID = "meal_type_server_id";
 

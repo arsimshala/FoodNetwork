@@ -21,9 +21,7 @@ import gr.academic.city.sdmd.foodnetwork.R;
 import gr.academic.city.sdmd.foodnetwork.db.FoodNetworkContract;
 import gr.academic.city.sdmd.foodnetwork.service.MealService;
 
-/**
- * Created by trumpets on 4/24/17.
- */
+
 public class MealsActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
     private static final String EXTRA_MEAL_TYPE_SERVER_ID = "meal_type_server_id";

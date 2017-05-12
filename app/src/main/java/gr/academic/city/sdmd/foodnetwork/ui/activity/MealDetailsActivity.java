@@ -18,9 +18,6 @@ import gr.academic.city.sdmd.foodnetwork.R;
 import gr.academic.city.sdmd.foodnetwork.db.FoodNetworkContract;
 
 
-/**
- * Created by trumpets on 4/13/16.
- */
 public class MealDetailsActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
     private static final String EXTRA_MEAL_ID = "meal_id";

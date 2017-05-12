@@ -1,6 +1,7 @@
 package gr.academic.city.sdmd.foodnetwork.ui.fragments;
 
 import android.app.TimePickerDialog;
+import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,9 +14,10 @@ import android.widget.Toast;
 
 import gr.academic.city.sdmd.foodnetwork.R;
 import gr.academic.city.sdmd.foodnetwork.service.MealService;
+import gr.academic.city.sdmd.foodnetwork.ui.activity.CreateMealActivity;
 
 
-public class CreateMealFragment extends AppCompatActivity {
+public class CreateMealFragment extends Fragment {
 
     private static final String EXTRA_MEAL_TYPE_SERVER_ID = "meal_type_server_id";
 

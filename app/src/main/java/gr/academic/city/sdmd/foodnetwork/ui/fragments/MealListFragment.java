@@ -1,6 +1,7 @@
 package gr.academic.city.sdmd.foodnetwork.ui.fragments;
 
 import android.database.Cursor;
+import android.app.Fragment;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.LoaderManager;
@@ -19,7 +20,7 @@ import gr.academic.city.sdmd.foodnetwork.db.FoodNetworkContract;
 import gr.academic.city.sdmd.foodnetwork.service.MealTypeService;
 
 
-public class MealListFragment extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
+public class MealListFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor> {
 
     private static final String[] PROJECTION = {
             FoodNetworkContract.MealType._ID,
