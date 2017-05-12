@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/MatchWidthMatchHeight"
-    tools:context=" ">
+    tools:context="gr.academic.city.sdmd.foodnetwork.ui.activity.MealsActivity">
 
     <include
         layout="@layout/layout_toolbar"
@@ -12,8 +12,8 @@
     <fragment
         android:id="@+id/f_meals"
         android:layout_below="@+id/toolbar"
-        class=" "
+        class="gr.academic.city.sdmd.foodnetwork.ui.fragments.MealsFragment"
         style="@style/MatchWidthWrapHeight"
-        tools:layout=" "/>
+        tools:layout="@layout/fragment_meals"/>
 
 </RelativeLayout>
