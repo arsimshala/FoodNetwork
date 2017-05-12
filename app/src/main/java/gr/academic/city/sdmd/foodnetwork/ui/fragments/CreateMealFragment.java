@@ -1,11 +1,10 @@
 package gr.academic.city.sdmd.foodnetwork.ui.fragments;
 
-import android.app.TimePickerDialog;
 import android.app.Fragment;
+import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;

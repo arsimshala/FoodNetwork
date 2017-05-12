@@ -1,8 +1,6 @@
 package gr.academic.city.sdmd.foodnetwork.util;
 
-/**
- * Created by trumpets on 4/24/17.
- */
+
 public final class Constants {
 
     private Constants() {}

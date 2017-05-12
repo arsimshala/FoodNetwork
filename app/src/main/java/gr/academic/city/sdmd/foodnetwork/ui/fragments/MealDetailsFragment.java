@@ -1,7 +1,7 @@
 package gr.academic.city.sdmd.foodnetwork.ui.fragments;
 
-import android.content.ContentUris;
 import android.app.Fragment;
+import android.content.ContentUris;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -9,9 +9,7 @@ import android.os.Bundle;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
