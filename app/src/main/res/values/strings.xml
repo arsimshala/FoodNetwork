@@ -16,4 +16,5 @@
     <string name="nothing_is_made_in_no_time">Nothing is made in no time! :)</string>
     <string name="create_meal">Create Meal</string>
     <string name="upvote_meal">Upvote Meal</string>
+    <string name="upvotes">Upvotes</string>
 </resources>

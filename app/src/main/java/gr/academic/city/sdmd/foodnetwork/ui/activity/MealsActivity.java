@@ -21,7 +21,9 @@ import gr.academic.city.sdmd.foodnetwork.R;
 import gr.academic.city.sdmd.foodnetwork.db.FoodNetworkContract;
 import gr.academic.city.sdmd.foodnetwork.service.MealService;
 
-
+/**
+ * Created by trumpets on 4/24/17.
+ */
 public class MealsActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
     private static final String EXTRA_MEAL_TYPE_SERVER_ID = "meal_type_server_id";
@@ -33,7 +35,7 @@ public class MealsActivity extends AppCompatActivity implements LoaderManager.Lo
             FoodNetworkContract.Meal.COLUMN_PREP_TIME_MINUTE
     };
 
-    private static final String SORT_ORDER = FoodNetworkContract.Meal.COLUMN_CREATED_AT + " DESC";
+    private static final String SORT_ORDER = FoodNetworkContract.Meal.COLUMN_MEAL_UPVOTES + " DESC";
 
     private static final int MEALS_LOADER = 10;
 

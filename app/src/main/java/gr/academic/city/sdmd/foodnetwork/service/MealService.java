@@ -30,6 +30,9 @@ public class MealService extends IntentService {
     private static final String EXTRA_NUMBER_OF_SERVINGS = "number_of_servings";
     private static final String EXTRA_PREP_TIME_HOUR = "prep_time_hour";
     private static final String EXTRA_PREP_TIME_MINUTE = "prep_time_minute";
+    private static final String EXTRA_UPVOTES = "upvotes";
+
+    private static final int upvotes = 0; // since upvotes when they start are always 0
 
     public static void startFetchMeals(Context context, long mealTypeServerId) {
         Intent intent = new Intent(context, MealService.class);
@@ -48,6 +51,8 @@ public class MealService extends IntentService {
         intent.putExtra(EXTRA_NUMBER_OF_SERVINGS, numberOfServings);
         intent.putExtra(EXTRA_PREP_TIME_HOUR, prepTimeHour);
         intent.putExtra(EXTRA_PREP_TIME_MINUTE, prepTimeMinute);
+
+        intent.putExtra(EXTRA_UPVOTES, upvotes);
 
         context.startService(intent);
     }
@@ -101,8 +106,9 @@ public class MealService extends IntentService {
         int numberOfServings = intent.getIntExtra(EXTRA_NUMBER_OF_SERVINGS, -1);
         int prepTimeHour = intent.getIntExtra(EXTRA_PREP_TIME_HOUR, -1);
         int prepTimeMinute = intent.getIntExtra(EXTRA_PREP_TIME_MINUTE, -1);
+        int upvotes = intent.getIntExtra(EXTRA_UPVOTES, this.upvotes);
 
-        ContentValues contentValues = new Meal(title, recipe, numberOfServings, prepTimeHour, prepTimeMinute, mealTypeServerId).toContentValues();
+        ContentValues contentValues = new Meal(title, recipe, numberOfServings, prepTimeHour, prepTimeMinute, mealTypeServerId, upvotes).toContentValues();
         contentValues.put(FoodNetworkContract.Meal.COLUMN_UPLOADED_TO_SERVER, 0);
         contentValues.put(FoodNetworkContract.Meal.COLUMN_SERVER_ID, -1);
 

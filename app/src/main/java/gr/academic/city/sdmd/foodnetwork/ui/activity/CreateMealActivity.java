@@ -15,6 +15,9 @@ import gr.academic.city.sdmd.foodnetwork.R;
 import gr.academic.city.sdmd.foodnetwork.service.MealService;
 
 
+/**
+ * Created by trumpets on 4/13/16.
+ */
 public class CreateMealActivity extends AppCompatActivity {
 
     private static final String EXTRA_MEAL_TYPE_SERVER_ID = "meal_type_server_id";
@@ -32,9 +35,12 @@ public class CreateMealActivity extends AppCompatActivity {
     private EditText txtRecipe;
     private EditText txtNumberOfServings;
     private TextView tvPrepTime;
+    private TextView tvUpvotes;
 
     private int prepTimeHour;
     private int prepTimeMinute;
+    private int upvotes = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +53,7 @@ public class CreateMealActivity extends AppCompatActivity {
         txtRecipe = (EditText) findViewById(R.id.txt_recipe);
         txtNumberOfServings = (EditText) findViewById(R.id.txt_number_of_servings);
         tvPrepTime = (TextView) findViewById(R.id.tv_prep_time);
+        tvUpvotes = (TextView) findViewById(R.id.tv_meal_upvotes);
 
         setPrepTime(0, 0);
 

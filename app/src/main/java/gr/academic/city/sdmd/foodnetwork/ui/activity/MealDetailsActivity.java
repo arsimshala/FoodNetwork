@@ -18,6 +18,9 @@ import gr.academic.city.sdmd.foodnetwork.R;
 import gr.academic.city.sdmd.foodnetwork.db.FoodNetworkContract;
 
 
+/**
+ * Created by trumpets on 4/13/16.
+ */
 public class MealDetailsActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
     private static final String EXTRA_MEAL_ID = "meal_id";
@@ -38,6 +41,7 @@ public class MealDetailsActivity extends AppCompatActivity implements LoaderMana
     private TextView tvNumberOfServings;
     private TextView tvPrepTime;
     private TextView tvCreationDate;
+    private TextView tvUpvotes;
 
     private SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
@@ -54,6 +58,7 @@ public class MealDetailsActivity extends AppCompatActivity implements LoaderMana
         tvNumberOfServings = (TextView) findViewById(R.id.tv_number_of_servings);
         tvPrepTime = (TextView) findViewById(R.id.tv_prep_time);
         tvCreationDate = (TextView) findViewById(R.id.tv_meal_creation_date);
+        tvUpvotes = (TextView) findViewById(R.id.tv_meal_upvotes);
 
         getSupportLoaderManager().initLoader(MEAL_LOADER, null, this);
     }
@@ -90,12 +95,15 @@ public class MealDetailsActivity extends AppCompatActivity implements LoaderMana
             tvTitle.setText(cursor.getString(cursor.getColumnIndexOrThrow(FoodNetworkContract.Meal.COLUMN_TITLE)));
             tvRecipe.setText(cursor.getString(cursor.getColumnIndexOrThrow(FoodNetworkContract.Meal.COLUMN_RECIPE)));
             tvNumberOfServings.setText(String.valueOf(cursor.getInt(cursor.getColumnIndexOrThrow(FoodNetworkContract.Meal.COLUMN_NUMBER_OF_SERVINGS))));
+            tvUpvotes.setText(String.valueOf(cursor.getInt(cursor.getColumnIndexOrThrow(FoodNetworkContract.Meal.COLUMN_MEAL_UPVOTES))));
+
 
             int prepTimeHour = cursor.getInt(cursor.getColumnIndexOrThrow(FoodNetworkContract.Meal.COLUMN_PREP_TIME_HOUR));
             int prepTimeMinute = cursor.getInt(cursor.getColumnIndexOrThrow(FoodNetworkContract.Meal.COLUMN_PREP_TIME_MINUTE));
 
             tvPrepTime.setText(getString(R.string.prep_time_w_placeholder, prepTimeHour, prepTimeMinute));
             tvCreationDate.setText(dateFormat.format(new Date(cursor.getLong(cursor.getColumnIndexOrThrow(FoodNetworkContract.Meal.COLUMN_CREATED_AT)))));
+
         }
 
         if (cursor != null) {

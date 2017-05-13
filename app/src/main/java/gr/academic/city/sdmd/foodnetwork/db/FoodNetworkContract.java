@@ -41,6 +41,7 @@ public final class FoodNetworkContract {
         public static final String COLUMN_UPLOADED_TO_SERVER = "uploaded_to_server";
         public static final String COLUMN_SERVER_ID = "server_id";
         public static final String COLUMN_MEAL_TYPE_SERVER_ID = "meal_type_server_id";
+        public static final String COLUMN_MEAL_UPVOTES = "upvotes";
 
         public static final Uri CONTENT_URI = Uri.parse("content://" +
                 AUTHORITY + "/" + TABLE_NAME);
