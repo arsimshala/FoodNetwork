@@ -40,7 +40,7 @@
             android:layout_below="@id/tv_meal_creation_date"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:src=""/>
+            android:src="@drawable/fusilli_pesto"/>
 
         <TextView
             android:id="@+id/tv_meal_recipe"
